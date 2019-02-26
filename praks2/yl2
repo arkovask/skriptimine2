@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Minu info ja aine mulje.
+#
+#Skript algab
+#
+echo "Arko Vask"
+echo "IS118"
+echo "Skriptimise õppeaine on väga huvitav."
+echo "Siiani olen ainest aru saanud ja arvan, et jõuan aines kaugele."
+#
+# skripti lõpp
