@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#Otsingu skript var kataloogist .log failide leidmiseks
+#
+find /var/ -name *.log 2>/dev/null -exec wc -l '{}' \; | sort -n -r | cut -f2 -d " "
+#
+#Find leiab vajalikud failid.
+#2>/dev/null viib errorid prügikasti.
+#wc loendab read ja sort hiljem sorteerib vajalikku
+#järjekorda(suuremast väiksemaks).
+#cut eemaldab numbrid, mida pole vaja teada failide ee
+#
+#Skripti lõpp
