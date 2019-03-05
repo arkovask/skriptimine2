@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#Skript, mis küsib kasutajalt tema nime ning prindib selle välja.
+#
+read -p "Sisestage oma nimi: " username perenimi
+echo "Tere, $username $perenimi!"
+#
+#read käsk küsib kasutaja sisestatud nime ning seab selle username nime alla
+#echo käsus väljastab username-i alla seatud nime koos tekstiga
+#lisatud on perenimi read käsu all,
+# kus lisatakse sisestatud perenimi perenime alla
+#See väljastatakse echo tekstis.
+#Skripti lõpp
