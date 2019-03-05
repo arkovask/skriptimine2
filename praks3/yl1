@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#Praks 3 ülesanne, skript mis väljastab kasutajale kuupäeva
+#ja ajaga seotud info
+#
+echo -n "Today is "
+date +"%A, %B %d, %Y"
+echo -n Time is
+date +" %R"
+echo
+echo -n "Calender of"
+cal
+
