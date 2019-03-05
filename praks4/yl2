@@ -6,13 +6,21 @@
 # ja mitu kihti tuleb tordile.
 #
 read -p "Sisestage aluskandiku pikkus(cm) ja laius(cm): " apikkus alaius
+#sisestati aluse laius ja pikkus
 read -p "Sisestage küpsise pindala(cm2): " kpindala
+#sisestati küpsise suurus
 read -p "Sisestage tordi kihtide arv: " tkihid
+#sisestati tordi kihtide arv
 read -p "Sisestage küpsiste arv pakis: " kpakis
+#sisestatio küpsiste arv ühes küpsise pakis
 alus=`expr $apikkus \* $alaius`
+#arvutatakse aluse pindala
 kkihil=`expr $alus / $kpindala`
+#arvutatakse küpsiste arv ühel kihil
 ktordil=`expr $kkihil \* $tkihid`
+#arvutatakse küpsiste kogu arv tordil
 pakke=`expr $ktordil / $kpakis`
+#arvutatakse, mitu pakki on vaja tordi jaoks
 echo "Tordi jaoks on vaja "$pakke" pakki küpsist."
 #
 #read käsud saavad kasutajalt vajalikud andmed
