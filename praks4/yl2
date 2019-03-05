@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#Skript, mis aitab arvutada, mitu pakki tooteid on vaja tordi valmistamiseks
+#Küsitakse erinevaid andmeid kasutajalt nagu näiteks
+# kui suur on tordi alus, mitu lisandit (nt küpsist) kasutatakse
+# ja mitu kihti tuleb tordile.
+#
+read -p "Sisestage aluskandiku pikkus(cm) ja laius(cm): " apikkus alaius
+read -p "Sisestage küpsise pindala(cm2): " kpindala
+read -p "Sisestage tordi kihtide arv: " tkihid
+read -p "Sisestage küpsiste arv pakis: " kpakis
+alus=`expr $apikkus \* $alaius`
+kkihil=`expr $alus / $kpindala`
+ktordil=`expr $kkihil \* $tkihid`
+pakke=`expr $ktordil / $kpakis`
+echo "Tordi jaoks on vaja "$pakke" pakki küpsist."
+#
+#read käsud saavad kasutajalt vajalikud andmed
+#arvutatakse erinevate variabel-ide abil vajalikud arvud, millega
+# saab arvutada küpsise pakkide arvust, mida vaja tordi jaoks.
+#
+#Skripti lõpp
