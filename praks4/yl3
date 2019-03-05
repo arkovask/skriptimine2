@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Skript arvutab bussi ekskursioonide korraldajale vajalikke busside arvu
+# reisjate jaoks. Küsitakse kasutajalt reisijate ja kohtade arvud ning
+# expr käsku kasutades arvutatakse vajalikke busside arv.
+#
+read -p "Sisestage reisjate arv: " reisjad
+read -p "Sisestage kohtade arv bussis: " kohad
+busse=`expr $reisjad / $kohad`
+maha=`expr $reisjad % $kohad`
+echo "Täielikult täidetud busse on "$busse" ja maha jääb "$maha"."
+#
+#read käskudega küsitakse reisjate arvu ja kohtade arvu bussis.
+#selle infoga arvutatakse busse variable-is busside arv, mida läheb
+# vaja reisjate jaoks. Arvus maha arvutatakse protsendiga
+# mitu inimest maha jääb tervest gruppist.
+#
+#Skripti lõpp
