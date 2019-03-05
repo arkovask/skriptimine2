@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#skript, mis väljastab, mitu päeva on masin töödanud
+#
+echo "Arvuti `hostname` on töödanud `uptime -p | cut -f2 -d "," | cut -f2 -d " "` minutit!"
+echo "Arvuti `hostname` on töödanud `uptime -p | cut -f2 -d " "` tund ja `uptime -p | cut -f4 -d " "` minutit!"
+#
+#hostname väljastab masina nime mille järel uptime -p 
+# väljastab masina töötamise aja
+#cut lõikab välja tunnid ja minutid
+#
+#Skripti lõpp
+
