@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Skript arvutab reisi pikkust.
+read -p "Sisesta reisi kuupäev:" kp
+# Sisestatakse reisi kuupäev.
+read -p "Sisesta reisi pikkus päevades:" rp
+# Sisestatakse reisi pikkus päevades.
+echo "Jõuate tagasi nädala "`expr \( $kp + $rp \) % 7`". päeval."
+# Arvutatakse välja tagasi jõudmise kuupäev
+#
+#Skripti lõpp
