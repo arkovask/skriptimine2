@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#Skript arvutab välja kolmnurga pindala kasutades heroni valemit. 
+# Skript küsib kasutajalt kolmnurga külgede pikkuseid ning arvutab pindala.
+# Vastusega koos tuleb selgitus, kus vastuses on olemas pikem seletus,
+# kuidas vastus saadi ja loomulikult, mis vastuseks tuli.
+read -p "Sisestage esimese külje pikkus a (cm):" a
+read -p "Sisestage teise külje pikkus b (cm):" b
+read -p "Sisestage kolmanda külje pikkus c (cm):" c
+# Kasutaja sisestab oma kolmnurga andmed arvutamiseks.
+P2=`expr $a + $b + $c`
+# Siin arvutatakse välja kolmnurga ümbermõõt.
+P=$(bc <<< "scale=2; ($P2)/2")
+# Siin tehakse ümbermõõt pooleks heroni valemi jaoks.
+S=$(bc <<< "scale=2; $P*($P-$a)*($P-$b)*($P - $c)")
+# Siin real arvutatakse heroni valemit enne ruutjuure võtmist.
+V=$(bc <<< "scale=2; sqrt ($S)")
+# Siin real arvutatakse heroni valem lõpuni võetes eelnevast vastusest ruutjuur.
+echo "Kolmnurga pindala on " $V " cm ruudus."
+# Vastus prinditakse välja kahe komakohaga.
+#
+# Skripti lõpp.
+
