@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#Skript aasta aja määramiseks
+echo "Sisestage kuu number: "
+read kuu
+if test $kuu -gt 1 -a $kuu -lt 3 -o $kuu -eq 12	#If, kui arv suurem kui 1 ja väiksem kui 3 või kuu on 12
+then
+echo "Praegu on talv."
+elif test $kuu -ge 6 -a $kuu -lt 9	#If, kui kuu on suurem/võrdne 6 ja vähem kui 9
+then
+echo "Praegu on suvi."
+elif test $kuu -ge 9 -a $kuu -lt 12	#If, kui kuu on suurem/võrdne 9 ja vähem kui 12
+then
+echo "Praegu on sügis."
+else
+echo "Kas sisestasite kuu arvu õigest?"
+fi
+#Skripti lõpp
