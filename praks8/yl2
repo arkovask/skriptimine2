@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#Skript arvu numbrite summa arvutamiseks
+echo "Sisestage arv, mille numbrite summat soovite saada: "
+read arv
+echo -n $arv
+summa=0
+while [ $arv -ne 0 ]	#While loop, kui arv pole 0
+do
+	jaak=$(( $arv % 10 ))	#arvutatakse jääki
+	summa=$(( $summa + $jaak ))	#muudetakse muutujat summa
+	arv=$(( $arv / 10 ))	#muudetakse muutujat arv
+done
+echo " numbrite summa on "$summa"."
+#Skripti lõpp
