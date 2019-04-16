@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#
+summa=0		#Määratakse muutuja "summa"
+for (( arv=0; arv<11; arv++ ))	#For tsükkel
+do
+	jaak=$(( arv % 2 ))	#Muutuja "jaak" kus võetakse arvu jääk
+	if [ $jaak -eq 0 ]	#If, kui jääk on võrdne nulliga
+	then
+	summa=$(( $summa + $arv )) #Muutuja "summa" muutmine
+	fi
+done
+echo "Paaris arvude summa vahemikust 1 kuni 10 on " $summa
+#Skripti lõpp
