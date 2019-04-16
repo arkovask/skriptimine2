@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#Skript nelinurga ,kahest kolmnurgast, tegemiseks
+echo "Sisestage ridade arv: "
+read rida
+for (( i = 1; i <= rida; i++ ))
+do
+	for (( j = rida; j >= 1; j-- ))
+	do
+		if [ $i -ge $j ]
+		then
+		echo -n "* "
+		else
+		echo -n "o "
+		fi
+	done
+echo ""
+done
+#Skripti lõpp
