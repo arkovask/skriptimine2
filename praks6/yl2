@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#Skript vajaminevate busside arvutamiseks
+echo "Sisestage reisijate arv: "
+read reisijad
+echo "Sisestage bussi kohtade arv: "
+read buss
+kohad=$(( $reisijad / $buss ))		#arvutab vaja minevate kohtade arvu
+maha=$(( $reisijad % $buss ))		#arvutab maha jäänute arvu
+if [ $maha -eq 0 ]			If käsk vaja mineva bussi arvu jaoks
+then
+echo "Vaja läheb " $kohad " bussi."
+else
+echo "Vaja läheb " `expr $kohad + 1 " bussi."
+fi
+#Skripti lõpp
