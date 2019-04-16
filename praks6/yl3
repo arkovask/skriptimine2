@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#Skript arvu paarsuse kontrolliks ja parameetri kontrolliks
+if [ "$1" == "" ]		#Kontroll if parameetrite jaoks
+then
+echo "Parameetrid puuduvad."
+else
+jaak=$(( $1 % 2 ))
+if [ $jaak -eq 0 ]		#If käsk paarsuse jaoks.
+then
+echo $1 " on paaris."
+else
+echo $1 " on paariut."
+fi
+fi
+#Skripti lõpp
