@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#kasutaja arvudega kuju väljastamine
+echo "Sisestage ridade arv: "
+read rida
+echo "Sisestage tärnide arv: "
+read arv
+for (( i = 1; i <= rida; i++ ))
+do
+echo -n $i". "
+	for (( j = 1; j <= arv; j++ ))
+	do
+	echo -n "* "
+	done
+echo ""
+done
+#Skripti lõpp
